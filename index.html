@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashutosh Kumar Singh | DevOps & Cloud Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #30363d;
+        }
+        .logo {
+            color: #58a6ff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #58a6ff;
+        }
+        .status-badge {
+            background: rgba(46, 160, 67, 0.15);
+            color: #3fb950;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(46, 160, 67, 0.4);
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 60px 40px;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+            gap: 40px;
+        }
+        .hero-left h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            color: #ffffff;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .tags {
+            color: #58a6ff;
+            font-size: 0.95rem;
+            word-spacing: 10px;
+            margin-top: 15px;
+        }
+        .terminal-box {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        .terminal-header {
+            background: #21262d;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #30363d;
+        }
+        .dots {
+            display: flex;
+            gap: 6px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+        .terminal-title {
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+        .terminal-body {
+            padding: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .cmd-prompt {
+            color: #3fb950;
+        }
+        .cmd-output {
+            color: #c9d1d9;
+            margin-bottom: 15px;
+            padding-left: 15px;
+        }
+        @media(max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+            .hero-left h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">#> ashutosh@devops</div>
+        <nav>
+            <ul>
+                <li><a href="#">engineering</a></li>
+                <li><a href="#">architecture</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">stack</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        <div class="status-badge">● LIVE</div>
+    </header>
+
+    <main>
+        <div class="hero-left">
+            <h1>Ashutosh<br>Kumar Singh</h1>
+            <div class="tags">DEVOPS ENGINEER · AZURE · TERRAFORM · GIT</div>
+        </div>
+
+        <div class="terminal-box">
+            <div class="terminal-header">
+                <div class="dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <div class="terminal-title">ashutosh@cloud-engineering ~ %</div>
+                <div style="font-size: 0.75rem; color: #3fb950;">ACTIVE</div>
+            </div>
+            <div class="terminal-body">
+                <div><span class="cmd-prompt">$</span> whoami</div>
+                <div class="cmd-output">ashutosh-kumar-singh</div>
+
+                <div><span class="cmd-prompt">$</span> cat engineering.config</div>
+                <div class="cmd-output">
+                    role: DevOps Engineer<br>
+                    cloud:<br>
+                    &nbsp;&nbsp;- Azure<br>
+                    &nbsp;&nbsp;- AWS<br>
+                    infrastructure:<br>
+                    &nbsp;&nbsp;- Terraform<br>
+                    &nbsp;&nbsp;- Git<br>
+                    automation:<br>
+                    &nbsp;&nbsp;- CI/CD Pipelines
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
