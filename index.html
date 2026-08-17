@@ -3,187 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashutosh Kumar Singh | DevOps & Cloud Engineer</title>
+    <title>Ashutosh Kumar Singh | DevOps Engineer</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            border-bottom: 1px solid #30363d;
-        }
-        .logo {
-            color: #58a6ff;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-        nav ul li a {
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-        nav ul li a:hover {
-            color: #58a6ff;
-        }
-        .status-badge {
-            background: rgba(46, 160, 67, 0.15);
-            color: #3fb950;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(46, 160, 67, 0.4);
-        }
-        main {
-            flex: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 60px 40px;
-            align-items: center;
-            max-width: 1300px;
-            margin: 0 auto;
-            width: 100%;
-            gap: 40px;
-        }
-        .hero-left h1 {
-            font-size: 4.5rem;
-            line-height: 1.1;
-            color: #ffffff;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-        .tags {
-            color: #58a6ff;
-            font-size: 0.95rem;
-            word-spacing: 10px;
-            margin-top: 15px;
-        }
-        .terminal-box {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-        }
-        .terminal-header {
-            background: #21262d;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #30363d;
-        }
-        .dots {
-            display: flex;
-            gap: 6px;
-        }
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        .dot-red { background: #ff5f56; }
-        .dot-yellow { background: #ffbd2e; }
-        .dot-green { background: #27c93f; }
-        .terminal-title {
-            font-size: 0.85rem;
-            color: #8b949e;
-        }
-        .terminal-body {
-            padding: 20px;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        .cmd-prompt {
-            color: #3fb950;
-        }
-        .cmd-output {
-            color: #c9d1d9;
-            margin-bottom: 15px;
-            padding-left: 15px;
-        }
-        @media(max-width: 900px) {
-            main {
-                grid-template-columns: 1fr;
-                padding: 30px 20px;
-            }
-            .hero-left h1 {
-                font-size: 3rem;
-            }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; padding: 20px; }
+        .cv-container { max-width: 900px; background: white; margin: auto; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: grid; grid-template-columns: 300px 1fr; gap: 40px; }
+        
+        /* Sidebar */
+        .sidebar { background: #2c3e50; color: white; padding: 20px; border-radius: 10px; text-align: center; }
+        .profile-img { width: 100%; max-width: 180px; border-radius: 50%; margin-bottom: 20px; border: 3px solid #3498db; object-fit: cover; aspect-ratio: 1/1; }
+        .sidebar h2 { font-size: 1.2rem; margin-top: 20px; border-bottom: 1px solid #34495e; padding-bottom: 10px; text-align: left; }
+        .info { text-align: left; }
+        .info p { font-size: 0.9rem; margin: 8px 0; word-break: break-all; }
+        
+        /* Main Content */
+        .main-content h1 { color: #2c3e50; margin: 0; font-size: 2.2rem; }
+        .main-content h3 { color: #3498db; margin-top: 5px; font-size: 1.2rem; }
+        .main-content p { color: #44495e; line-height: 1.6; }
+        .section { margin-bottom: 30px; }
+        .section h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; color: #2c3e50; font-size: 1.2rem; }
+        .skill-tag { display: inline-block; background: #e0e0e0; color: #333; padding: 5px 10px; border-radius: 5px; margin: 3px; font-size: 0.85rem; font-weight: 600; }
+        .skills-container { text-align: left; }
+        
+        @media(max-width: 768px) {
+            .cv-container { grid-template-columns: 1fr; padding: 20px; }
+            .sidebar { text-align: center; }
+            .sidebar h2, .info, .skills-container { text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">#> ashutosh@devops</div>
-        <nav>
-            <ul>
-                <li><a href="#">engineering</a></li>
-                <li><a href="#">architecture</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">stack</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </nav>
-        <div class="status-badge">● LIVE</div>
-    </header>
-
-    <main>
-        <div class="hero-left">
-            <h1>Ashutosh<br>Kumar Singh</h1>
-            <div class="tags">DEVOPS ENGINEER · AZURE · TERRAFORM · GIT</div>
+<div class="cv-container">
+    <div class="sidebar">
+        <!-- Direct GitHub Profile Picture -->
+        <img src="https://github.com/ashutoshkumarsingh5188.png" alt="Ashutosh Kumar Singh" class="profile-img">
+        
+        <h2>Contact & Info</h2>
+        <div class="info">
+            <p>📧 singh.ashutosh5188@gmail.com</p>
+            <p>📱 +91 9852923838</p>
+            <p>🎂 05-01-1988</p>
+            <p>📍 Sasaram, Bihar</p>
         </div>
 
-        <div class="terminal-box">
-            <div class="terminal-header">
-                <div class="dots">
-                    <span class="dot dot-red"></span>
-                    <span class="dot dot-yellow"></span>
-                    <span class="dot dot-green"></span>
-                </div>
-                <div class="terminal-title">ashutosh@cloud-engineering ~ %</div>
-                <div style="font-size: 0.75rem; color: #3fb950;">ACTIVE</div>
-            </div>
-            <div class="terminal-body">
-                <div><span class="cmd-prompt">$</span> whoami</div>
-                <div class="cmd-output">ashutosh-kumar-singh</div>
-
-                <div><span class="cmd-prompt">$</span> cat engineering.config</div>
-                <div class="cmd-output">
-                    role: DevOps Engineer<br>
-                    cloud:<br>
-                    &nbsp;&nbsp;- Azure<br>
-                    &nbsp;&nbsp;- AWS<br>
-                    infrastructure:<br>
-                    &nbsp;&nbsp;- Terraform<br>
-                    &nbsp;&nbsp;- Git<br>
-                    automation:<br>
-                    &nbsp;&nbsp;- CI/CD Pipelines
-                </div>
-            </div>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-tag">Terraform</div>
+            <div class="skill-tag">Azure Cloud</div>
+            <div class="skill-tag">CI/CD Pipelines</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">Git / GitHub</div>
+            <div class="skill-tag">Linux</div>
         </div>
-    </main>
+    </div>
+
+    <div class="main-content">
+        <h1>Ashutosh Kumar Singh</h1>
+        <h3>DevOps Engineer</h3>
+        
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Experienced DevOps Engineer specialized in Cloud Automation, Infrastructure as Code (IaC), and resource management. Passionate about building robust deployment workflows and scalable cloud infrastructure.</p>
+        </div>
+
+        <div class="section">
+            <h2>Expertise & Workflow</h2>
+            <p><strong>DevOps Engineer</strong><br>
+            - Automating cloud resource provisioning using <strong>Terraform</strong> and Azure.<br>
+            - Managing code repositories, CI/CD pipelines, and streamlining testing phases.</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
